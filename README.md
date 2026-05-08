@@ -1,6 +1,6 @@
 # Digital Garden Starter
 
-A bilingual (English / Spanish) static site template for a digital garden,
+A bilingual (Spanish / English) static site template for a digital garden,
 built with plain HTML and CSS. No build step. No framework. Edit a file,
 push to GitHub, your changes are live.
 
@@ -10,21 +10,27 @@ This is the starter template for the Digital Garden course.
 
 ```
 .
-├── index.html               # English home
-├── es/index.html            # Spanish home
-├── en/
-│   ├── garden/              # Your notes (the digital garden itself)
-│   ├── letters/             # Newsletter / longer pieces
-│   ├── offerings/           # Workshops, services, products
+├── index.html               # Spanish home (root)
+├── jardin/                  # Tu jardín digital
+│   └── primera-nota/
+├── sobre/                   # Sobre mí
+├── contacto/
+├── en/                      # English mirror
+│   ├── index.html
+│   ├── garden/
+│   │   └── first-note/
 │   ├── about/
 │   └── contact/
-├── es/                      # Mirror of /en/ in Spanish
 ├── assets/
 │   ├── style.css            # All visual styling lives here
 │   ├── menu.js              # Mobile menu toggle
 │   └── images/              # Drop your images here
 └── .github/workflows/static.yml   # Auto-deploys to GitHub Pages
 ```
+
+The site has Spanish at the root and English under `/en/`. Each page links
+to its counterpart in the other language via the `EN / ES` switcher in the
+header.
 
 ## Getting started
 
@@ -59,12 +65,16 @@ declarations.
 
 ## Adding a new note to your garden
 
-1. Make a new folder inside `en/garden/` (and optionally `es/garden/`).
+1. Make a new folder inside `jardin/` (and optionally `en/garden/`).
    The folder name becomes the URL slug — keep it lowercase, hyphenated:
-   `en/garden/the-quiet-page/`.
-2. Copy `en/garden/first-note/index.html` into it as a starting point.
+   `jardin/la-pagina-tranquila/`.
+2. Copy `jardin/primera-nota/index.html` into it as a starting point.
 3. Edit the title, body, and date.
-4. Add a link to it from `en/garden/index.html`.
+4. Add a link to it from `jardin/index.html`.
+
+If you're adding the note in both languages, mirror the structure under
+`en/garden/<slug>/` and update each page's language switcher to point at
+its counterpart.
 
 ## Deploying
 
