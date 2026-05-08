@@ -12,13 +12,11 @@ This is the starter template for the Digital Garden course.
 .
 ├── index.html               # Spanish home (root)
 ├── jardin/                  # Tu jardín digital
-│   └── primera-nota/
 ├── sobre/                   # Sobre mí
 ├── contacto/
 ├── en/                      # English mirror
 │   ├── index.html
 │   ├── garden/
-│   │   └── first-note/
 │   ├── about/
 │   └── contact/
 ├── assets/
@@ -29,7 +27,7 @@ This is the starter template for the Digital Garden course.
 ```
 
 The site has Spanish at the root and English under `/en/`. Each page links
-to its counterpart in the other language via the `EN / ES` switcher in the
+to its counterpart in the other language via the language switcher in the
 header.
 
 ## Getting started
@@ -62,19 +60,6 @@ The fonts are loaded from Google Fonts (Lora for body and headings,
 JetBrains Mono for navigation, captions, and code). To swap fonts, edit
 the `@import` line at the top of `style.css` and the `font-family`
 declarations.
-
-## Adding a new note to your garden
-
-1. Make a new folder inside `jardin/` (and optionally `en/garden/`).
-   The folder name becomes the URL slug — keep it lowercase, hyphenated:
-   `jardin/la-pagina-tranquila/`.
-2. Copy `jardin/primera-nota/index.html` into it as a starting point.
-3. Edit the title, body, and date.
-4. Add a link to it from `jardin/index.html`.
-
-If you're adding the note in both languages, mirror the structure under
-`en/garden/<slug>/` and update each page's language switcher to point at
-its counterpart.
 
 ## Deploying
 
